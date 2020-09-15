@@ -1,21 +1,21 @@
 # uorhousepositions
 Designed for UO Renaissance - http://www.uorenaissance.com/
 
-Simple Powershell Script to download UOR housing positions and create a UOAM mapfile.  This script will offset the positions provided by http://www.uorenaissance.com/map/house.txt so they display properly in UOAM.
+Simple Powershell Script to download UOR housing positions and create a ClassicUO World Map CSV map file.  This script will offset the positions provided by http://www.uorenaissance.com/map/house.txt so they display properly in UOAM.
 
 ## Instructions:
 
 1. Download the Powershell script
-2. (Optional) The script will create a file in C:\Program Files\UOAM by default.  If you have UOAM installed elsewhere, modify the value at the top of the script to reflect the proper location.  You can also modify the name of the file that is generated. 
+2. (Optional) The script will create a file in C:\UORenaissance\ClassicUO\Data\Client\UORHouses.csv by default.  If you have ClassicUO installed elsewhere, modify the value at the top of the script to reflect the proper location.  You can also modify the name of the file that is generated. 
 
 ```powershell
-$UOAMHousesFile = "C:\Program Files\UOAM\UORHouses.map"
+$UOAMHousesFile = "C:\UORenaissance\ClassicUO\Data\Client\UORHouses.csv"
 ```
 
 3. Run Powershell script (You may need to run script as an administrator)
-4. After a few moments, a file will be generated in C:\Program Files\UOAM\
-5. If you haven't already, open up UOAM, hit CTRL-A, click the Files tab and Add UORHouses.map.
-6. If you're missing the icon, go to the Filter tab in Options, scroll down to fortress and click Edit. Select "Choose Icon" and select Fortress_Update2.ico
+4. After a few moments, a file will be generated as C:\UORenaissance\ClassicUO\Data\Client\UORHouses.csv
+5. Copy the PNG files in the MapIcons folder to "C:\UORenaissance\ClassicUO\Data\Client\MapIcons" folder, or to whereever your ClassicUO is installed to. 
+6. In ClassicUO open the World Map. By default it should load all the CSV files. If not right click on the map and mouse over the Map Marker Options menu and check to see if UORHouses.csv is listed and enabled. See more about the World Map here https://github.com/andreakarasho/ClassicUO/wiki/World-Map
 
 ## Scheduling:
 
