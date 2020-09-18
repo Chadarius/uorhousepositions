@@ -34,7 +34,7 @@ $HouseOffsets = @{
 try {
     # Get the current housing positions from the UOR master list
     Write-Host "Getting latest house list from UOR"
-    $CurrentHousePositions = Invoke-WebRequest -Uri "http://www.uorenaissance.com/map/house.txt"
+    $CurrentHousePositions = Invoke-WebRequest -Uri "http://www.uorenaissance.com/map/house.txt" -UseBasicParsing
 
     # Create a blank file or clear out the existing and set it in the UOAM format
     # UOAM does not like it if you don't use ANSI format on file
