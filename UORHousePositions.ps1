@@ -36,10 +36,8 @@ try {
     Write-Host "Getting latest house list from UOR"
     $CurrentHousePositions = Invoke-WebRequest -Uri "http://www.uorenaissance.com/map/house.txt" -UseBasicParsing
 
-    # Create a blank file or clear out the existing and set it in the UOAM format
-    # UOAM does not like it if you don't use ANSI format on file
-    Write-Host "Generating an empty $($HousesFile).."
-    "3" | Out-File -FilePath $HousesFile -Encoding ASCII
+    # Create blank file or overwrite existing
+    New-Item "$HousesFile" -ItemType "file" -Force
 
     # Keep count, why not?
     $HouseCount = 0
